@@ -40,7 +40,7 @@ export const Rtk = async (ctx) => {
 
   return {
     "tool.execute.before": async (input, output) => {
-      if (input.tool === "bash") {
+      if (input.tool === "bash" || tool === "shell") {
         output.args.command = processCommand(output.args.command);
       }
     },
